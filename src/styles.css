@@ -10,6 +10,7 @@ body {
 
 nav{
   z-index: 1;
+  position: absolute;
 }
 
 
@@ -19,8 +20,8 @@ nav{
   text-transform: uppercase;
   text-decoration: none;
   color: #81b71a;
-  padding: 20px 0px;
-  margin: 0px 20px;
+  padding: 3vh 2vh;
+  margin: 0px 12vh;
   display: inline-block;
   position: relative;
   opacity: 0.75;
@@ -31,6 +32,7 @@ nav{
 }
 
 .nav-link::before {
+
   transition: 300ms;
   height: 5px;
   content: "";
@@ -57,10 +59,11 @@ nav{
 }
 
 #home-intro {
-  height: 70vh;
+  height: 75vh;
   padding: 0%;
   text-align: bottom;
-  margin-top: -10vh;
+  margin-top: -20vh;
+  position: static;
 }
 
 #img{
