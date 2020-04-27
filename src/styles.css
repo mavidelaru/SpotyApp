@@ -1,0 +1,312 @@
+html,
+body {
+  height: 100vh !important;
+}
+
+body {
+  background-color: black;
+  color: white !important;
+}
+
+nav{
+  z-index: 1;
+}
+
+
+.nav-link {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #81b71a;
+  padding: 20px 0px;
+  margin: 0px 20px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #1db954 ;
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  margin-left: -7px;
+  bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 100%;
+}
+
+
+
+
+/*******INTRO*******/
+.container-fluid{
+  padding: 0% !important;
+}
+
+#home-intro {
+  height: 70vh;
+  padding: 0%;
+  text-align: bottom;
+  margin-top: -10vh;
+}
+
+#img{
+  background-image: url(../src/assets/img/intro-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+
+}
+
+#gradiant{
+  background: linear-gradient( transparent 40%, black);
+  height: 100%;
+  display: flex;
+
+}
+
+#home-text {
+  display: inline-block;
+  align-items: bottom;
+  align-self: flex-end;
+}
+
+ h1{
+  font-size: 3rem;
+  line-height: 3rem;
+  font-family: Roboto;
+}
+
+
+ h2{
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 100;
+  font-family: Roboto;
+}
+h3{
+  font-size: 1rem;
+  line-height: 3rem;
+  font-weight: 100;
+  font-family: Roboto;
+  color: rgb(160, 159, 159);
+
+}
+
+.btn{
+  border-radius: 2ch;
+}
+
+.btn-spoty{
+  color: whitesmoke;
+  background-color: #1db954;
+}
+
+.btn-spoty-2{
+  color: whitesmoke;
+  border-radius: 2ch;
+  border: 2px solid #2e313f;
+  background-color: #2e313f;
+}
+
+.btn-spoty:hover,.btn-spoty-2:hover {
+  color: whitesmoke;
+  background-color: transparent;
+}
+
+
+
+a{
+  text-decoration: none!important;
+  color: whitesmoke;
+}
+
+
+a:hover{
+  color: whitesmoke;
+}
+
+
+hr {
+  border-color: white;
+}
+
+th{
+  font-weight: 700;
+  font-family: Roboto;
+  font-size: 1rem;
+  color: whitesmoke
+}
+
+td{
+  font-weight: 100;
+  font-family: Roboto;
+  font-size: 1rem;
+  color: whitesmoke;
+  align-self: center;
+  align-items: bottom;
+
+}
+
+.puntero {
+  cursor: pointer;
+}
+
+.img-circle {
+  border-radius: 100%;
+  width: 150px;
+}
+
+
+
+
+
+.cd-headline.rotate-1 .cd-words-wrapper {
+  display: inline-block;
+  perspective: 300px;
+}
+
+.cd-headline.rotate-1 b {
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(180deg);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cd-headline.rotate-1 b.is-visible {
+  position: relative;
+  opacity: 1;
+  transform: rotateX(0deg) ;
+  animation: cd-rotate-1-in 1.5s;
+
+}
+.cd-headline.rotate-1 b.is-hidden {
+
+  transform: rotateX(180deg);
+  animation: cd-rotate-1-out 1.5s;
+}
+
+
+@keyframes cd-rotate-1-in {
+  0% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+/***CARDS***/
+
+.card{
+  border-radius: 0%;
+  border: 0;
+  background-color: #2e313f;
+  text-align: center;
+}
+
+.card-title,
+.card-text {
+  color: white;
+  font-weight: 200;
+
+}
+.card-body{
+  opacity: 0.9;
+}
+
+.badge {
+  margin-left: 5px;
+}
+
+.btn-outline-success {
+  margin-left: 5px;
+}
+
+.img-thumb {
+  width: 60px;
+  height: 60px;
+}
+
+
+
+
+/* Animaciones */
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
